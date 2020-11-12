@@ -1,0 +1,42 @@
+.Question {
+  background-color: #ebf6f7;
+  padding: 30px 100px;
+  &__contents {
+    background-color: white;
+    text-align: center;
+    border: 2px solid black;
+    padding: 50px 100px;
+    &__content {
+      font-size: 25px;
+      font-weight: bold;
+      border: 1px solid black;
+      justify-content: center;
+      padding: 5px 20px;
+    }
+    &__answer {
+      font-size: 20px;
+      display: flex;
+      margin-top: 50px;
+      list-style: none;
+      justify-content: space-around;
+      &__a {
+        border: 1px solid pink;
+        padding: 10px 20px;
+        background-color: pink;
+        color: white;
+      }
+      &__b {
+        border: 1px solid blue;
+        background-color: blue;
+        padding: 10px 20px;
+        color: white;
+      }
+      &__c {
+        border: 1px solid red;
+        background-color: red;
+        padding: 10px 20px;
+        color: white;
+      }
+    }
+  }
+}
