@@ -1,0 +1,17 @@
+= render "main/header"
+
+.Question
+  .Question__contents
+    .Question__contents__content
+      Q1.マッチングアプリを使う目的は？
+    .Question__contents__answer
+      = link_to "#", class:"Question__contents__answer__a" do
+        A.恋人が欲しい
+        = image_tag "material/f880e2a9.png", size: "100x150"
+      = link_to "#", class: "Question__contents__answer__b" do
+        B.結婚相手を探したい
+        = image_tag "material/couple_fufu_young.png", size: "100x150"
+      = link_to "#", class: "Question__contents__answer__c" do
+        C.遊び相手が欲しい
+        = image_tag "material/1.png", size: "100x150"
+= render "main/footer"
