@@ -1,0 +1,16 @@
+= render "main/header"
+.Question
+  .Question__contents
+    .Question__contents__content
+      Q2.恋人を探すポイントは？
+    .Question__contents__answer
+      = link_to "#", class:"Question__contents__answer__a" do
+        A.気軽に
+        = image_tag "material/couple.png", size: "150x150"
+      = link_to "#", class: "Question__contents__answer__b" do
+        B.趣味や価値観で
+        = image_tag "material/shumi.png", size: "100x150"
+      = link_to "#", class: "Question__contents__answer__c" do
+        C.将来も見据えた
+        = image_tag "material/syourai.png", size: "100x150"
+= render "main/footer"

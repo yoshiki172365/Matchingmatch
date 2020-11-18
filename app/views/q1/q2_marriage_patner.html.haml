@@ -1,0 +1,16 @@
+= render "main/header"
+.Question
+  .Question__contents
+    .Question__contents__content
+      Q2.結婚相手を探すポイントは？
+    .Question__contents__answer
+      = link_to "#", class:"Question__contents__answer__a" do
+        A.相性重視で
+        = image_tag "material/aishou.png", size: "120x150"
+      = link_to "#", class: "Question__contents__answer__b" do
+        B.サポートが欲しい
+        = image_tag "material/saport.png", size: "100x150"
+      = link_to "#", class: "Question__contents__answer__c" do
+        C.再婚相手を
+        = image_tag "material/saikon.png", size: "100x150"
+= render "main/footer"
