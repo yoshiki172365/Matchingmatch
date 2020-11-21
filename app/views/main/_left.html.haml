@@ -1,0 +1,21 @@
+.left
+  .left__user
+    .left__user__contents
+      = link_to 'ログイン', "#", class: "left__user__contents__login"
+      .left__user__contents__info
+        .left__user__contents__info__name
+          name
+        = link_to "#" do
+          = icon('far', 'edit', class: "left__user__contents__info__edit")
+  .left__new
+    = link_to 'アプリ投稿', "#", class: "left__new__link"
+  .left__search
+    .left__search__contents
+      .left__search__contents__form
+        = form_with local: true do |f|
+          = f.text_field :search, class: "left__search__contents__form__input", placeholder: "キーワードから探す"
+          = f.submit 'search', class: "left__search__contents__form__btn"
+      .left__search__contents__content
+        = form_with local:true do |form|
+          .left__search__contents__content__box
+          = form.submit 'マッチング！', class: "left__search__contents__content__btn"
