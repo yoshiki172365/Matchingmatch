@@ -84,6 +84,40 @@
   }
 }
 
+.top {
+  width: calc(100vw - 300px);
+  background-color: #ebf6f7;
+  &__sub {
+    height: 100px;
+  }
+  &__main {
+    height: auto;
+    background-color: #3ccace;
+    &__contents {
+      margin: 20px 50px;
+      padding: 50px 0;
+      &__content {
+        height: 100px;
+        background-color: #fff;
+        margin-bottom: 10px;
+        padding-left: 30px;
+        padding-top: 10px;
+        border-bottom: 1px solid #dcdcdc;
+        &__name {
+          color: #000;
+          font-weight: bold;
+          font-size: 20px;
+          margin-bottom: 5px;
+        }
+        &__description {
+          font-size: 15px;
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
 .Top {
   padding: 100px 100px;
   background-color: #ebf6f7;
