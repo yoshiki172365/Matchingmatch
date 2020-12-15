@@ -1,0 +1,32 @@
+= render "main/header"
+.new
+  .new__contents
+    .new__contents__title アプリ投稿
+    .new__contents__content
+      = form_with model: @app, local: true, id:"new_app" do |f|
+        .new__contents__content__name 
+          .new__contents__content__headline
+            .new__contents__content__headline--title アプリ名
+            .new__contents__content__headline--required 必須
+          = f.text_field :name, class: "new__contents__content__name__box", placeholder: "40字まで", maxlength: '40'
+
+        .new__contents__content__description
+          .new__contents__content__headline
+            .new__contents__content__headline--title 説明
+            .new__contents__content__headline--required 必須
+          = f.text_area :description, class: "new__contents__content__description__box", placeholder: "アプリの説明を記入"
+
+        .new__contents__content__category
+          .new__contents__content__headline
+            .new__contents__content__headline--title マッチングの目的・手段など
+            .new__contents__content__headline--required 必須
+        .listing-form-box
+          .listing-product-detail__category
+            .listing-select-wrapper
+              .listing-select-wrapper__box
+                = f.select :category_id, @category_parent_array, {}, {class: 'listing-select-wrapper__box--select', id: 'parent_category'}
+
+        .new__contents__content__btn
+          = f.submit "投稿する"
+
+= render "main/footer"
