@@ -3,7 +3,7 @@
   .new__contents
     .new__contents__title アプリ投稿
     .new__contents__content
-      = form_with model: @app, local: true do |f|
+      = form_with model: @app, local: true, id:"new_app" do |f|
         .new__contents__content__name 
           .new__contents__content__headline
             .new__contents__content__headline--title アプリ名
@@ -20,7 +20,11 @@
           .new__contents__content__headline
             .new__contents__content__headline--title マッチングの目的・手段など
             .new__contents__content__headline--required 必須
-          = f.collection_select :category_id, @categories, :id, :name, { include_blank: "----", selected: "",prompt: ""}, {class: "new__contents__content__category__box"}
+        .listing-form-box
+          .listing-product-detail__category
+            .listing-select-wrapper
+              .listing-select-wrapper__box
+                = f.select :category, @category_parent_array, {}, {class: 'listing-select-wrapper__box--select', id: 'parent_category'}
 
         .new__contents__content__btn
           = f.submit "投稿する"

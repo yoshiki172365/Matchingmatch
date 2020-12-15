@@ -2,12 +2,13 @@
   .top__sub
   .top__main
     .top__main__contents
-      .top__main__contents__content
+      - @apps.each do |app|
         = link_to "#" do
-          .top__main__contents__content__name
-            app
-          .top__main__contents__content__description
-            description
+          .top__main__contents__content
+            .top__main__contents__content__name
+              = app.name
+            .top__main__contents__content__description
+              = app.description
       .top__main__contents__content
         = link_to "#" do
           .top__main__contents__content__name

@@ -7,5 +7,10 @@ Rails.application.routes.draw do
   get 'main/index'
   root "main#index"
   
-  resources :apps, only: [:index, :show, :new]
+  resources :apps, only: [:index, :show, :new, :create] do
+    collection do
+      get 'get_category_children', defaults: { format: 'json' }
+      get 'get_category_grandchildren', defaults: { format: 'json' }
+    end
+  end
 end
