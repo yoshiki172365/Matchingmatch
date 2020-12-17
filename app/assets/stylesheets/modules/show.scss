@@ -1,0 +1,26 @@
+.show {
+  background-color: #ecf6f7;
+  width: 100%;
+  padding: 50px 0;
+  &__contents {
+    background-color: #fff;
+    width: calc(100vw - 200px);
+    margin: 0 100px;
+    padding: 20px 50px;
+    &__content {
+      margin: 20px 20px;
+      &__category {
+        margin-bottom: 15px;
+      }
+      &__title {
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      &__description {
+        font-size: 20px;
+        margin-bottom: 8px;
+      }
+    }
+  }
+}

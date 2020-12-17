@@ -2,22 +2,10 @@
   .top__sub
   .top__main
     .top__main__contents
-      -# - @apps.each do |app|
-      -#   = link_to "#" do
-      -#     .top__main__contents__content
-      -#       .top__main__contents__content__name
-      -#         = app.name
-      -#       .top__main__contents__content__description
-      -#         = app.description
-      .top__main__contents__content
-        = link_to "#" do
-          .top__main__contents__content__name
-            app2
-          .top__main__contents__content__description
-            description
-      .top__main__contents__content
-        = link_to "#" do
-          .top__main__contents__content__name
-            app3
-          .top__main__contents__content__description
-            description
+      - @apps.each do |app|
+        = link_to app_path(app.id) do
+          .top__main__contents__content
+            .top__main__contents__content__name
+              = app.name
+            .top__main__contents__content__description
+              = app.pr
