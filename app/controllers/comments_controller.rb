@@ -20,5 +20,6 @@ private
   def comment_params
     params.require(:comment)
           .permit(:comment).merge(user_id: current_user.id, app_id: params[:app_id])
+  end
 
 end
