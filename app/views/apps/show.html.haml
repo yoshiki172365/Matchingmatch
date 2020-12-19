@@ -1,0 +1,13 @@
+= render "main/header"
+
+.show
+  .show__contents
+    .show__contents__content
+      .show__contents__content__category
+        = "#{@app.category.name}マッチングしたい人へ"
+      .show__contents__content__title
+        = @app.name
+      .show__contents__content__description
+        = @app.description
+
+= render "main/footer"
