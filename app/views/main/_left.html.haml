@@ -5,7 +5,7 @@
         = link_to 'ログアウト', destroy_user_session_path, method: "delete", class: "left__user__contents__login"
         .left__user__contents__info
           .left__user__contents__info__name
-            name
+            = current_user.name
           = link_to "#" do
             = icon('far', 'edit', class: "left__user__contents__info__edit")
   - else
