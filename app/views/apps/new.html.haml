@@ -16,15 +16,18 @@
             .new__contents__content__headline--required 必須
           = f.text_area :description, class: "new__contents__content__description__box", placeholder: "アプリの説明を記入"
 
+        .new__contents__content__pr
+          .new__contents__content__headline
+            .new__contents__content__headline--title 一言PR
+            .new__contents__content__headline--required 必須
+          = f.text_area :pr, class: "new__contents__content__pr__box", placeholder: "アプリの一言PRを記入"
+
         .new__contents__content__category
           .new__contents__content__headline
             .new__contents__content__headline--title マッチングの目的・手段など
             .new__contents__content__headline--required 必須
-        .listing-form-box
-          .listing-product-detail__category
-            .listing-select-wrapper
-              .listing-select-wrapper__box
-                = f.select :category_id, @category_parent_array, {}, {class: 'listing-select-wrapper__box--select', id: 'parent_category'}
+          .new__contents__content__category__box
+            = f.collection_select :category_id, Category.all, :id, :name, {prompt: ""}, {class: "new__contents__content__category__box__select"}
 
         .new__contents__content__btn
           = f.submit "投稿する"
