@@ -23,7 +23,7 @@ class AppsController < ApplicationController
           .permit(:name,
                   :description,
                   :pr,
-                  :category_id)
+                  :category_id).merge(user_id: current_user.id)
   end
 
   def set_app

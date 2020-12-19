@@ -1,12 +1,22 @@
 .left
-  .left__user
-    .left__user__contents
-      = link_to 'ログイン', "#", class: "left__user__contents__login"
-      .left__user__contents__info
-        .left__user__contents__info__name
-          name
-        = link_to "#" do
-          = icon('far', 'edit', class: "left__user__contents__info__edit")
+  - if user_signed_in?
+    .left__user
+      .left__user__contents
+        = link_to 'ログアウト', destroy_user_session_path, method: "delete", class: "left__user__contents__login"
+        .left__user__contents__info
+          .left__user__contents__info__name
+            name
+          = link_to "#" do
+            = icon('far', 'edit', class: "left__user__contents__info__edit")
+  - else
+    .left__user
+      .left__user__contents
+        = link_to 'ログイン', new_user_session_path, class: "left__user__contents__login"
+        .left__user__contents__info
+          .left__user__contents__info__name
+            name
+          = link_to "#" do
+            = icon('far', 'edit', class: "left__user__contents__info__edit")
   .left__new
     = link_to 'アプリ投稿', "/apps/new", class: "left__new__link"
   .left__search
