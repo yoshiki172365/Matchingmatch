@@ -1,0 +1,27 @@
+.Comment-show
+  .Comment-show__contents
+    .Comment-show__contents__name
+      コメント
+    - @commentALL.each do |comment|
+      .Comment-show__contents__content
+        .Comment-show__contents__content__main
+          .Comment-show__contents__content__main__user-name
+            = comment.user.name
+          .Comment-show__contents__content__main__comment
+            = comment.comment
+        - if user_signed_in?
+          - if current_user.id == comment.user.id
+            .Comment-show__contents__content__sub
+              = link_to app_comment_path(@app, comment), method: :delete, class: "Comment-show__contents__content__sub__destroy" do
+                削除
+
+- if user_signed_in?
+  .Comment-form
+    .Comment-form__contents
+      = form_with model: [@app, @comment], local: true do |form|
+        = form.text_area :comment, placeholder: "コメントする"
+        .Comment-form__contents__warning
+          %ul
+            %li 相手のことを考えて丁寧なコメントを心がけましょう。
+            %li 不快な言葉遣いなどは利用制限や退会処分となることがあります。
+        = form.submit "コメントする" 
