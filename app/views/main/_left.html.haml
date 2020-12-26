@@ -22,7 +22,7 @@
   .left__search
     .left__search__contents
       .left__search__contents__form
-        = form_with local: true do |f|
+        = form_with url: search_apps_path, local: true, method: :get do |f|
           = f.text_field :search, class: "left__search__contents__form__input", placeholder: "キーワードから探す"
           = f.submit 'search', class: "left__search__contents__form__btn"
       .left__search__contents__content
