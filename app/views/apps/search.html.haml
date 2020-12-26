@@ -1,0 +1,12 @@
+= form_with url: search_apps_path, local: true, method: :get, class: "search-form" do |f|
+  = f.text_field :search, class: "left__search__contents__form__input", placeholder: "キーワードから探す"
+  = f.submit 'search', class: "left__search__contents__form__btn"
+.top__main
+  .top__main__contents
+    - @apps.each do |app|
+      = link_to app_path(app.id) do
+        .top__main__contents__content
+          .top__main__contents__content__name
+            = app.name
+          .top__main__contents__content__description
+            = app.pr

@@ -18,6 +18,10 @@ class AppsController < ApplicationController
   def create
     App.create(app_params)
   end
+
+  def search
+    @apps = App.search(params[:keyword])
+  end
   
   private
   def app_params

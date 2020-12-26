@@ -9,5 +9,8 @@ Rails.application.routes.draw do
   
   resources :apps, only: [:index, :show, :new, :create] do
     resources :comments, only: [:create, :show, :destroy]
+    collection do
+      get 'search'
+    end
   end
 end
