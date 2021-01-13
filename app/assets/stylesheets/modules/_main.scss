@@ -66,10 +66,9 @@
   }
   &__search {
     height: auto;
-    background-color: #fff;
     margin-top: 10px;
     &__contents {
-      margin: 30px 20px;
+      margin: 30px 0;
       &__form {
         display: flex;
         justify-content: space-around;
@@ -79,6 +78,22 @@
         }
         &__btn {
           height: 30px;
+        }
+      }
+      &__content {
+        margin-top: 20px;
+        &__box {
+          height: 30px;
+          width: 280px;
+          margin: 0 10px;
+        }
+        &__btn {
+          width: 140px;
+          background-color: #fff;
+          color: #3ccace;
+          margin: 10px 80px 0 80px;
+          padding: 5px 10px;
+          font-weight: bold;
         }
       }
     }

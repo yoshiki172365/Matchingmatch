@@ -11,4 +11,5 @@ class App < ApplicationRecord
       App.all
     end
   end
+
 end
