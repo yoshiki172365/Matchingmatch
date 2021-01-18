@@ -3,7 +3,7 @@ class AppsController < ApplicationController
   before_action :set_app, only: [:show]
 
   def index
-    @apps = App.all
+    @apps = App.limit(5).order('created_at ASC')
   end
 
   def show
@@ -17,6 +17,12 @@ class AppsController < ApplicationController
 
   def create
     App.create(app_params)
+  end
+
+  def destroy
+    @app = App.find(params[:id])
+    @app.destroy
+    redirect_to root_path
   end
 
   def search

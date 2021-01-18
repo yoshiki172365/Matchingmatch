@@ -24,3 +24,28 @@
     }
   }
 }
+
+.show-if {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-btn {
+  padding: 10px 60px;
+  background-color: #f16272;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  height: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 0.3s ease-in-out;
+}
+
+.app-btn:hover {
+  background-color: #ee3e52;
+}

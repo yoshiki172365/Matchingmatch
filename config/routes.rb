@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get 'main/index'
   root "main#index"
   
-  resources :apps, only: [:index, :show, :new, :create] do
+  resources :apps, only: [:index, :show, :new, :create, :destroy] do
     resources :comments, only: [:create, :show, :destroy]
     collection do
       get 'search'

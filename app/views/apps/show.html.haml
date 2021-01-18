@@ -1,5 +1,4 @@
-= render "main/header"
-
+= render "main/sub-header"
 .show
   .show__contents
     .show__contents__content
@@ -9,5 +8,10 @@
         = @app.name
       .show__contents__content__description
         = @app.description
+    .show-if
+      -if user_signed_in?
+        -if current_user.id == @app.user.id
+          = link_to "アプリを削除する", app_path(@app), method: :delete, class: "app-btn"
+          = link_to "アプリを編集する", "#", class: "app-btn"
 = render "comments/comment"
 = render "main/footer"

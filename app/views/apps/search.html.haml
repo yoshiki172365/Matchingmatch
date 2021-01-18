@@ -1,6 +1,8 @@
-= form_with url: search_apps_path, local: true, method: :get, class: "search-form" do |f|
-  = f.text_field :keyword, class: "left__search__contents__form__input", placeholder: "キーワードから探す"
-  = f.submit 'search', class: "left__search__contents__form__btn"
+= render "main/sub-header"
+.search
+  = form_with url: search_apps_path, local: true, method: :get, class: "search-base" do |f|
+    = f.text_field :keyword, class: "search-input", placeholder: "キーワードから探す"
+    = f.submit 'search', class: "search-btn"
 .top__main
   .top__main__contents
     - @apps.each do |app|

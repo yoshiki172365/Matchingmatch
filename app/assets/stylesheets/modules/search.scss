@@ -1,0 +1,29 @@
+.search {
+  background-color: #ebf6f7;
+}
+
+.search-base {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-input {
+  height: 40px;
+  width: 500px;
+  border: none;
+}
+.search-input:focus {
+  border-bottom: 2px solid #c0c0c0;
+  outline: none;
+}
+
+.search-btn {
+  height: 40px;
+  width: 60px;
+  background-color: #fff;
+  border: none;
+}
+.search-btn:hover {
+  background-color: #e0ffff;
+}
