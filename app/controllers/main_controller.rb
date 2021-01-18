@@ -1,6 +1,6 @@
 class MainController < ApplicationController
   def index
-    @apps = App.all
+    @apps = App.limit(5).order('created_at DESC')
   end
 
   def search
