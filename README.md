@@ -15,6 +15,7 @@ https://fierce-retreat-50843.herokuapp.com/
 
 ## DEMO
 ### トップ画面
+[![Image from Gyazo](https://i.gyazo.com/5e9421b7f5889666248987126d7978a8.png)](https://gyazo.com/5e9421b7f5889666248987126d7978a8)
 
 ### 新規登録画面
 
