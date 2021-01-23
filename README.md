@@ -18,8 +18,13 @@ https://fierce-retreat-50843.herokuapp.com/
 [![Image from Gyazo](https://i.gyazo.com/5e9421b7f5889666248987126d7978a8.png)](https://gyazo.com/5e9421b7f5889666248987126d7978a8)
 
 ### 新規登録画面
+[![Image from Gyazo](https://i.gyazo.com/d3d2ca9d370407f3c1f8fb7509918cf4.png)](https://gyazo.com/d3d2ca9d370407f3c1f8fb7509918cf4)
+
+### アプリ投稿画面
+[![Image from Gyazo](https://i.gyazo.com/5077c30865d880e8bd665e3525963114.png)](https://gyazo.com/5077c30865d880e8bd665e3525963114)
 
 ### アプリ紹介画面（コメント機能）
+[![Image from Gyazo](https://i.gyazo.com/bbf23515e159edbdaa6845c7c082127b.gif)](https://gyazo.com/bbf23515e159edbdaa6845c7c082127b)
 
 ### 検索機能
 
