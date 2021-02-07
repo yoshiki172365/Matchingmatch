@@ -3,6 +3,7 @@ class App < ApplicationRecord
   belongs_to_active_hash :category
   belongs_to :user
   has_many :comments
+  has_many :favorites,dependent: :destroy
 
   def self.search(search)
     if search != ""

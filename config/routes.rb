@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   
   resources :apps, only: [:index, :show, :new, :create, :destroy] do
     resources :comments, only: [:create, :show, :destroy]
+    resources :favorites, only: [:create, :destroy]
     collection do
       get 'search'
     end

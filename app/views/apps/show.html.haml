@@ -13,5 +13,12 @@
         -if current_user.id == @app.user.id
           = link_to "アプリを削除する", app_path(@app), method: :delete, class: "app-btn"
           = link_to "アプリを編集する", "#", class: "app-btn"
+    .optionalArea
+      %ul
+        %li.optionalBtnlikebtn
+          = render "favorites/favorite"
+      %ul.optional
+        %li.optionalBtn
+          不適切な商品の通報
 = render "comments/comment"
 = render "main/footer"
