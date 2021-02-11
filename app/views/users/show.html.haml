@@ -1,0 +1,20 @@
+= render "main/sub-header"
+.filp
+  .card
+    .details
+      .name
+        = @user.name
+      .role
+        = @user.email
+      .contact
+        = @user.apps.name
+
+        .favorite-lists
+          - if @favorite_list.present?
+            - @favorite_list.each do |app|
+              = link_to app_path(app.id) do
+                .favorite-lists__list.draggable
+                  .favorite-lists__list__name
+                    = app.name
+                  .favorite-lists__list__pr
+                    = app.pr
