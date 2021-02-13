@@ -2,6 +2,7 @@
   background-color: #ecf6f7;
   width: 100%;
   height: auto;
+  padding-bottom: 30px;
 }
 .card{
   background-color: #fff;
@@ -26,9 +27,31 @@
 }
 
 .favorite-lists {
-  margin-top: 30px;
+  margin-top: 5px;
   &__list {
     margin-bottom: 10px;
     background-color: #fff;
+    border: 1px solid #c0c0c0;
+    &__name {
+      color: #000;
+      font-size: 20px;
+      border-bottom: none;
+      margin-left: 10px;
+    }
+    &__pr {
+      color: #000;
+      border-bottom:none;
+      margin-left: 20px;
+    }
   }
+  & :hover {
+    background-color: #ecf6f7;
+  }
+}
+
+.favorite-name {
+}
+
+.mypage-favorite {
+  margin-top: 30px;
 }

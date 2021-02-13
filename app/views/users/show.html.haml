@@ -8,12 +8,15 @@
         = @user.email
       .contact
         = @user.apps.name
-
+      .mypage-favorite
+        .favorite-name
+          .i.far.fa-thumbs-up
+          お気に入り
         .favorite-lists
           - if @favorite_list.present?
             - @favorite_list.each do |app|
               = link_to app_path(app.id) do
-                .favorite-lists__list.draggable
+                .favorite-lists__list
                   .favorite-lists__list__name
                     = app.name
                   .favorite-lists__list__pr
