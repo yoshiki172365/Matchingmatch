@@ -5,7 +5,7 @@
         %span お気に入り
         = @app.favorites.length
   - else
-    = link_to app_favorites_path(@app), method: :delete, remote: true, class: "favorite-btn favorite-delete" do
+    = link_to app_favorite_path(@app), method: :delete, remote: true, class: "favorite-btn favorite-delete" do
       .i.far.fa-thumbs-up
         %span お気に入り
         = @app.favorites.length

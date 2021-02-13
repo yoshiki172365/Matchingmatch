@@ -8,6 +8,8 @@
             = current_user.name
           = link_to "/users/edit" do
             = icon('far', 'edit', class: "left__user__contents__info__edit")
+          = link_to user_path(current_user.id) do
+            = icon('fas', 'home', class: "left__user__contents__info__edit")
   - else
     .left__user
       .left__user__contents

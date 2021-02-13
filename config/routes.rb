@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get 'q1/q2_playmate'
   get 'main/index'
   root "main#index"
+
+  resources :users, only: [:show]
   
   resources :apps, only: [:index, :show, :new, :create, :destroy] do
     resources :comments, only: [:create, :show, :destroy]

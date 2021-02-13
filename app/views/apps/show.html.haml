@@ -7,7 +7,7 @@
       .show__contents__content__title
         = @app.name
       .show__contents__content__description
-        = @app.description
+        = safe_join(@app.description.split("\n"),tag(:br))
     .show-if
       -if user_signed_in?
         -if current_user.id == @app.user.id
