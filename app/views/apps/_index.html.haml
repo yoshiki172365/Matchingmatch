@@ -1,13 +1,23 @@
-.top
-  .top__sub
-    .top__sub__title
-      Matching Match
-  .top__main
-    .top__main__contents
-      - @apps.each do |app|
-        = link_to app_path(app.id) do
-          .top__main__contents__content
-            .top__main__contents__content__name
-              = app.name
-            .top__main__contents__content__description
-              = app.pr
+.first-img
+  .first-img__contents
+    .first-img__contents__title Matching Match
+    .first-img__contents__text
+      %p あなたに合う人は
+      %p あなたに合う出会い『方』で
+
+
+
+
+-# .top
+-#   .top__sub
+-#     .top__sub__title
+-#       Matching Match
+-#   .top__main
+-#     .top__main__contents
+-#       - @apps.each do |app|
+-#         = link_to app_path(app.id) do
+-#           .top__main__contents__content
+-#             .top__main__contents__content__name
+-#               = app.name
+-#             .top__main__contents__content__description
+-#               = app.pr

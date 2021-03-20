@@ -1,0 +1,42 @@
+.new-header
+  .new-header__inner
+    .new-header__inner__main
+      .new-header__inner__main__logo
+        =link_to root_path do
+          = image_tag asset_path('material/m.png')
+    - if user_signed_in?
+      .new-header__inner__nav
+        %ul
+          %li
+            %a{ :href => '#'}
+              特徴
+          %li
+            %a{ :href => '#'}
+              初めての方へ
+          %li
+            %a{:href => '#'}
+              よくある質問
+          %li
+            %a{ :href => '#'}
+              ログイン
+          %li
+            %a{ :href => '#'}
+              新規登録
+    -else
+      .new-header__inner__nav
+        %ul
+          %li
+            %a{ :href => '#'}
+              MatchingMatchの特徴
+          %li
+            %a{ :href => '#'}
+              よくある質問
+          %li
+            %a{:href => '#'}
+              マイページ
+          %li
+            %a{ :href => '#'}
+              ログアウト
+          %li
+            %a{ :href => '#'}
+              アプリ投稿

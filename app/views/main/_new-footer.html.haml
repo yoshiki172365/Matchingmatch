@@ -1,0 +1,18 @@
+.new-footer
+  .new-footer__contents
+    .new-footer__contents__left
+      .new-footer__contents__left__name
+        = current_user.name
+      = link_to "/users/edit" do
+        = icon('far', 'edit', class: ".new-footer__contents__left__name__edit")
+      = link_to user_path(current_user.id) do
+        = icon('fas', 'home', class: "new-footer__contents__left__name__home")
+    - if user_signed_in?
+      .new-footer__contents__right
+        = link_to 'ログアウト', destroy_user_session_path, method: "delete", class: "login-btn"
+        = link_to 'アプリ投稿', "/apps/new", class: "post-btn"
+    - else
+      .new-footer__contents__right
+        = link_to 'ログイン', new_user_session_path, class: "login-btn"
+        = link_to '新規登録', "/users/sign_up", class: "post_btn"
+        
